@@ -1,4 +1,6 @@
 # KidCoachAI
+Description: An interactive storytelling app that keeps kids engaged and learning. Parents can either select from curated stories with clear summaries and lessons or generate custom stories by typing a lesson, choosing story length, and naming characters. The app then uses AI to create the story, play synchronized audio with text highlighting, and end with comprehension questions for kids.
+
 
 This project provides a React client and an accompanying Node/Express backend that proxies requests to Amazon Polly.
 
