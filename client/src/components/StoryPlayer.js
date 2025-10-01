@@ -1,18 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import AWS from 'aws-sdk';
-
-AWS.config.update({
-  accessKeyId: 'YOUR_ACCESS_KEY_ID',
-  secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
-  region: 'us-east-1'
-});
-
-const Polly = new AWS.Polly();
 
 const StoryPlayer = ({ story }) => {
   const [text, setText] = useState('');
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio, setAudio] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (story) {
@@ -28,8 +20,16 @@ const StoryPlayer = ({ story }) => {
       setIsPlaying(false);
     } else {
       if (audio) {
-        audio.play();
-        setIsPlaying(true);
+        audio.play()
+          .then(() => {
+            setIsPlaying(true);
+            setError(null);
+          })
+          .catch((playError) => {
+            console.error(playError);
+            setError(playError.message);
+            setIsPlaying(false);
+          });
       } else if (text) {
         synthesizeSpeech(text);
       }
@@ -37,29 +37,76 @@ const StoryPlayer = ({ story }) => {
   };
 
   const synthesizeSpeech = (text) => {
-    const params = {
-      Text: text,
-      OutputFormat: 'mp3',
-      VoiceId: 'Joanna'
-    };
+    setError(null);
 
-    Polly.synthesizeSpeech(params, (err, data) => {
-      if (err) {
-        console.log(err, err.stack);
-      } else {
-        const uInt8Array = new Uint8Array(data.AudioStream);
-        const blob = new Blob([uInt8Array.buffer], { type: 'audio/mpeg' });
+    fetch('/api/polly', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ text })
+    })
+      .then(async (response) => {
+        const raw = await response.text();
+
+        if (!response.ok) {
+          try {
+            const data = JSON.parse(raw);
+            if (data && data.error) {
+              throw new Error(data.error);
+            }
+          } catch (parseError) {
+            if (raw) {
+              throw new Error(raw);
+            }
+          }
+
+          throw new Error('Failed to synthesize speech');
+        }
+
+        try {
+          return JSON.parse(raw);
+        } catch (parseError) {
+          throw new Error('Invalid JSON response from server');
+        }
+      })
+      .then(({ audio: audioBase64, contentType }) => {
+        if (!audioBase64) {
+          throw new Error('Invalid audio response from server');
+        }
+
+        const binary = window.atob(audioBase64);
+        const len = binary.length;
+        const bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i += 1) {
+          bytes[i] = binary.charCodeAt(i);
+        }
+
+        const blob = new Blob([bytes.buffer], { type: contentType || 'audio/mpeg' });
         const url = URL.createObjectURL(blob);
         const newAudio = new Audio(url);
         newAudio.onended = () => {
           setIsPlaying(false);
           setAudio(null);
+          URL.revokeObjectURL(url);
         };
         setAudio(newAudio);
-        newAudio.play();
-        setIsPlaying(true);
-      }
-    });
+        newAudio.play()
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch((playError) => {
+            setError(playError.message);
+            setIsPlaying(false);
+            setAudio(null);
+            URL.revokeObjectURL(url);
+          });
+      })
+      .catch((fetchError) => {
+        console.error(fetchError);
+        setError(fetchError.message);
+        setIsPlaying(false);
+      });
   };
 
   return (
@@ -74,6 +121,11 @@ const StoryPlayer = ({ story }) => {
       <button onClick={handlePlayPause}>
         {isPlaying ? 'Pause' : 'Play'}
       </button>
+      {error && (
+        <p style={{ color: 'red' }}>
+          {error}
+        </p>
+      )}
     </div>
   );
 };
