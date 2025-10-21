@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StorytellAI - Create a New Story</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1f2937",
+              "secondary": "#14b8a6",
+              "accent": "#f59e0b",
+              "background-light": "#f9fafb",
+              "background-dark": "#111827",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .slider-thumb::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            background-color: #1f2937;
+            border-radius: 9999px;
+            cursor: pointer;
+            border: 2px solid #f9fafb;
+        }
+        .dark .slider-thumb::-webkit-slider-thumb {
+            background-color: #f9fafb;
+            border-color: #111827;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-700 sticky top-0 z-10">
+<div class="container mx-auto px-6 py-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4 text-primary dark:text-white">
+<span class="material-symbols-outlined text-3xl text-primary dark:text-secondary">auto_stories</span>
+<h2 class="text-xl font-bold leading-tight tracking-tight">StorytellAI</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-secondary" href="#">Story Library</a>
+<a class="text-sm font-medium leading-normal text-primary dark:text-secondary" href="#">Parental Controls</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDOwHBeo9McbgVgDssY8N_28_v62d-kk30q1MFuz5mquHaUjxK3hav1q-3vMellpxbeL50v5V7VFdzE1evKslSedkHh6RgFh_F8RMj8Q4XryfVbs1CkbKo7RjhsWW28jZ33CvDRVw6tA94UY9gtNKaJTMmQJEy2mdcYQafWJHlougzy4wR-HHaTnkIuT-OOmgbUCuuRwGjfhK1soMOro4k-M8dgYDVzNZTdgcxjOFJMlJaeVZ8RlN0_bFKI-SUoJcCLTRhwHRyhzF8R");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="container mx-auto px-6 py-10">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em] text-gray-900 dark:text-white">Create a New Story</p>
+<p class="text-gray-500 dark:text-gray-400 mt-2">Craft the perfect tale for your little one.</p>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="col-span-1 md:col-span-2">
+<label class="flex flex-col">
+<p class="text-base font-medium leading-normal pb-2 text-gray-900 dark:text-white">What is the story about?</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-4 text-base font-normal leading-normal" placeholder="e.g., A brave little dragon that learns to fly" value=""/>
+</label>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-medium leading-normal pb-2 text-gray-900 dark:text-white">Choose a Moral</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 dark:focus:ring-secondary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 h-14 p-4 text-base font-normal leading-normal appearance-none bg-no-repeat bg-right pr-8" style="background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27%236b7280%27%3e%3cpath d=%27M7 10l5 5 5-5H7z%27/%3e%3c/svg%3e');">
+<option>Select a moral</option>
+<option>Honesty is the best policy</option>
+<option>The importance of kindness</option>
+<option>Courage in the face of fear</option>
+<option>The value of friendship</option>
+</select>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-medium leading-normal pb-2 text-gray-900 dark:text-white">Select a Tone</p>
+<div class="flex h-14 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-gray-800 has-[:checked]:shadow-md has-[:checked]:text-primary dark:has-[:checked]:text-secondary text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-all">
+<input checked="" class="invisible w-0" name="story_tone" type="radio" value="Funny"/>
+<span class="truncate">Funny</span>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-gray-800 has-[:checked]:shadow-md has-[:checked]:text-primary dark:has-[:checked]:text-secondary text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-all">
+<input class="invisible w-0" name="story_tone" type="radio" value="Adventurous"/>
+<span class="truncate">Adventurous</span>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-gray-800 has-[:checked]:shadow-md has-[:checked]:text-primary dark:has-[:checked]:text-secondary text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-all">
+<input class="invisible w-0" name="story_tone" type="radio" value="Calm"/>
+<span class="truncate">Calm</span>
+</label>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2">
+<label class="flex flex-col relative group" for="age-range">
+<p class="text-base font-medium leading-normal pb-2 text-gray-900 dark:text-white flex items-center">
+                                        Child's Age Range 
+                                        <span class="material-symbols-outlined text-sm ml-1 text-gray-400 cursor-help">help_outline</span>
+<span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-48 bg-gray-800 text-white text-xs rounded-md p-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-normal z-10 text-center">Adjusts story complexity and themes to be age-appropriate.</span>
+</p>
+<div class="relative pt-1">
+<input class="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer slider-thumb" id="age-range" max="8" min="3" type="range" value="5"/>
+<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2">
+<span>3 yrs</span>
+<span>4 yrs</span>
+<span>5 yrs</span>
+<span>6 yrs</span>
+<span>7 yrs</span>
+<span>8 yrs</span>
+</div>
+</div>
+</label>
+</div>
+<div class="col-span-1 md:col-span-2 mt-4">
+<button class="w-full bg-primary dark:bg-secondary text-white font-bold py-4 px-4 rounded-lg hover:bg-opacity-90 dark:hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">auto_fix_high</span>
+                                    Generate Story
+                                </button>
+</div>
+</div>
+<div class="mt-16">
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Your Recent Creations</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer group">
+<h4 class="font-bold text-lg text-primary dark:text-secondary mb-2 group-hover:underline">The Dragon Who Couldn't Breathe Fire</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">A young dragon named Sparky goes on an adventure to find his inner flame, learning that courage comes in many forms.</p>
+<div class="mt-4 flex items-center justify-between text-xs text-gray-400 dark:text-gray-500">
+<span>Tone: Adventurous</span>
+<span>Moral: Courage</span>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer group">
+<h4 class="font-bold text-lg text-primary dark:text-secondary mb-2 group-hover:underline">The Laughing Tree</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">A giggling oak tree teaches the forest animals the importance of sharing laughter and joy, especially on gloomy days.</p>
+<div class="mt-4 flex items-center justify-between text-xs text-gray-400 dark:text-gray-500">
+<span>Tone: Funny</span>
+<span>Moral: Kindness</span>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer group relative">
+<div class="absolute top-3 right-3 bg-accent/20 text-accent rounded-full px-2 py-0.5 text-xs font-semibold">New</div>
+<h4 class="font-bold text-lg text-primary dark:text-secondary mb-2 group-hover:underline">The Sleepy Star</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">A little star finds a cozy cloud to sleep on, lulling all the little dreamers on Earth to a peaceful slumber.</p>
+<div class="mt-4 flex items-center justify-between text-xs text-gray-400 dark:text-gray-500">
+<span>Tone: Calm</span>
+<span>Moral: Friendship</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StoryTime AI - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d171b] dark:text-white">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-slate-50 group/design-root overflow-x-hidden p-4 sm:p-6 md:p-8">
+<div class="layout-container flex h-full grow flex-col w-full max-w-md">
+<div class="flex flex-col items-center gap-4 mb-8">
+<svg class="text-primary" fill="none" height="48" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+<path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+</svg>
+<div class="text-center">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em] text-[#0d171b] dark:text-white">Welcome to StoryTime AI</p>
+<p class="text-base font-normal leading-normal text-[#4c809a] dark:text-slate-400">AI-powered stories that grow with your child.</p>
+</div>
+</div>
+<div class="layout-content-container flex flex-col flex-1">
+<div class="pb-3">
+<div class="flex border-b border-[#cfdfe7] dark:border-slate-700 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary pb-[13px] pt-4 flex-1 text-center" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em] text-[#0d171b] dark:text-white">Log In</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent pb-[13px] pt-4 flex-1 text-center" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em] text-[#4c809a] dark:text-slate-400">Create Account</p>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4 py-6">
+<div class="flex flex-col gap-4">
+<label class="flex flex-col flex-1">
+<p class="text-base font-medium leading-normal pb-2 text-[#0d171b] dark:text-white">Email Address</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d171b] focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#cfdfe7] bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:placeholder:text-slate-400 h-14 placeholder:text-[#4c809a] p-[15px] text-base font-normal leading-normal" placeholder="Enter your email" type="email" value=""/>
+</label>
+<label class="flex flex-col flex-1">
+<p class="text-base font-medium leading-normal pb-2 text-[#0d171b] dark:text-white">Password</p>
+<div class="flex w-full flex-1 items-stretch rounded-xl">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-xl text-[#0d171b] focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#cfdfe7] bg-slate-50 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:placeholder:text-slate-400 h-14 placeholder:text-[#4c809a] p-[15px] border-r-0 pr-2 text-base font-normal leading-normal" placeholder="Enter your password" type="password" value=""/>
+<div class="text-[#4c809a] flex border border-[#cfdfe7] bg-slate-50 items-center justify-center px-4 rounded-r-xl border-l-0 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-400 cursor-pointer">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+</div>
+</label>
+</div>
+<p class="text-sm font-normal leading-normal py-2 px-1 text-primary underline cursor-pointer">Forgot Password?</p>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+<div class="relative flex items-center justify-center my-2">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-[#cfdfe7] dark:border-slate-700"></div>
+</div>
+<div class="relative bg-slate-50 dark:bg-background-dark px-4 text-sm text-[#4c809a] dark:text-slate-400">OR</div>
+</div>
+<button class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-4 bg-[#e7eff3] dark:bg-slate-700 text-[#0d171b] dark:text-white text-base font-bold leading-normal tracking-[0.015em] gap-2 hover:bg-[#dbe7ee] dark:hover:bg-slate-600 transition-colors">
+<svg class="w-5 h-5" viewbox="0 0 48 48">
+<path d="M24 9.5c3.23 0 6.13 1.11 8.4 3.29l6.3-6.3C34.92 2.77 29.88 0 24 0 14.9 0 7.29 5.39 3.86 12.91l7.85 6.09C13.43 13.72 18.25 9.5 24 9.5z" fill="#4285F4"></path>
+<path d="M46.14 24.5c0-1.63-.15-3.2-.42-4.7H24v8.89h12.44c-.54 2.86-2.09 5.28-4.59 7.02l7.28 5.68C43.43 37.33 46.14 31.45 46.14 24.5z" fill="#34A853"></path>
+<path d="M11.71 19c-.62-1.85-.97-3.82-.97-5.91s.35-4.06.97-5.91L3.86.99C1.39 5.86 0 11.23 0 17.09s1.39 11.23 3.86 16.1l7.85-6.09z" fill="#FBBC05"></path>
+<path d="M24 48c6.48 0 12.01-2.14 16.01-5.79l-7.28-5.68c-2.11 1.42-4.82 2.27-7.73 2.27-5.75 0-10.57-4.22-12.29-9.81l-7.85 6.09C7.29 42.61 14.9 48 24 48z" fill="#EA4335"></path>
+<path d="M0 0h48v48H0z" fill="none"></path>
+</svg>
+<span class="truncate">Continue with Google</span>
+</button>
+</div>
+</div>
+<div class="text-center mt-8">
+<p class="text-xs text-[#4c809a] dark:text-slate-400">
+                    Need help? Visit our <a class="underline text-primary" href="#">Help Center</a> or <a class="underline text-primary" href="#">Contact Us</a>.
+                </p>
+</div>
+</div>
+</div>
+</body></html>
