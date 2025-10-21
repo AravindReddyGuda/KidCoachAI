@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Parent Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": {
+              "50": "#eff6ff",
+              "100": "#dbeafe",
+              "200": "#bfdbfe",
+              "300": "#93c5fd",
+              "400": "#60a5fa",
+              "500": "#3b82f6",
+              "600": "#2563eb",
+              "700": "#1d4ed8",
+              "800": "#1e40af",
+              "900": "#1e3a8a",
+              "950": "#172554"
+            },
+            "background-light": "#f8fafc",
+            "background-dark": "#020617",
+            "card-light": "#ffffff",
+            "card-dark": "#0f172a",
+            "text-light-primary": "#020617",
+            "text-dark-primary": "#f8fafc",
+            "text-light-secondary": "#64748b",
+            "text-dark-secondary": "#94a3b8",
+            "accent": "#f59e0b"
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.75rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings:
+      'FILL' 1
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-text-dark-primary">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-card-light dark:bg-card-dark flex flex-col p-4 border-r border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 mb-10 px-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4FUnh6vy7H0s3GePOTKAs1L3X12sYIkwqD_hlzBC4c2Xbl3lqQowPrFAY8Lf7pU4LYM-GwpyEA83dII9u6bvlKTfAsi5LIjNV51h3JmWH7hMB2SesuJQlxORoXT-8tKKtVYJ5p6WmHayPY9ZFDx0v4zAPW9C0bSsw2WXZvAiucb-DXRUjjBKpGkzd6v0yWuomE6byR5tVFr4_I7y3qkElbIwWjyjJ7io7nRznN4wr0f1D_OtX6P_jgOc7-NnCj_fmye8jIxzW-eVx");'></div>
+<div class="flex flex-col">
+<h1 class="text-text-light-primary dark:text-text-dark-primary text-base font-bold">Explorer Family</h1>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-sm">Parent Account</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-semibold">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400" href="#">
+<span class="material-symbols-outlined fill">history</span>
+<p class="text-sm font-semibold">Activity Log</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" href="#">
+<span class="material-symbols-outlined">face</span>
+<p class="text-sm font-semibold">Child Profiles</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" href="#">
+<span class="material-symbols-outlined">shield_person</span>
+<p class="text-sm font-semibold">Parental Controls</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-semibold">Settings</p>
+</a>
+</nav>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-semibold">Logout</p>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<header class="flex flex-wrap justify-between gap-4 items-center mb-8">
+<div>
+<h1 class="text-3xl font-bold tracking-tight">Activity Log</h1>
+<p class="text-text-light-secondary dark:text-text-dark-secondary mt-1">Review your child's recent listening sessions and Q&amp;As.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-primary-600 text-white h-10 px-4 rounded-lg flex items-center justify-center gap-2 text-sm font-semibold hover:bg-primary-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base">add_circle</span>
+            Create Story
+          </button>
+</div>
+</header>
+<div class="flex flex-col md:flex-row gap-4 mb-8">
+<div class="flex items-center gap-2">
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-lg bg-card-light dark:bg-card-dark border border-slate-200 dark:border-slate-700 px-4 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:border-slate-300 dark:hover:border-slate-600 transition-colors">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>Last 7 days</span>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-lg bg-card-light dark:bg-card-dark border border-slate-200 dark:border-slate-700 px-4 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:border-slate-300 dark:hover:border-slate-600 transition-colors">
+<span class="material-symbols-outlined text-lg">child_care</span>
+<span>All Children</span>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+</div>
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-light-secondary dark:text-text-dark-secondary">search</span>
+<input class="form-input w-full h-10 rounded-lg border-slate-200 dark:border-slate-700 bg-card-light dark:bg-card-dark pl-10 pr-4 placeholder:text-text-light-secondary dark:placeholder:text-text-dark-secondary focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors" placeholder="Search stories or questions..." type="text"/>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg border border-slate-200 dark:border-slate-800 mb-8">
+<div class="flex flex-col sm:flex-row gap-6">
+<div class="flex flex-col gap-1">
+<p class="text-base font-semibold text-text-light-primary dark:text-text-dark-primary">Listening Time</p>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">This Week</p>
+<p class="text-4xl font-bold tracking-tight text-text-light-primary dark:text-text-dark-primary mt-2">4h 30m</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-green-500 text-lg">trending_up</span>
+<p class="text-green-500 text-sm font-medium">+15% from last week</p>
+</div>
+</div>
+<div class="flex-1">
+<div class="grid min-h-[120px] grid-flow-col gap-4 items-end justify-items-center">
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="w-full bg-primary-100 dark:bg-primary-900/40 rounded-full h-24 flex items-end">
+<div class="w-full bg-primary-500 rounded-full" style="height: 50%;"></div>
+</div>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-medium">Mon</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="w-full bg-primary-100 dark:bg-primary-900/40 rounded-full h-24 flex items-end">
+<div class="w-full bg-primary-500 rounded-full" style="height: 20%;"></div>
+</div>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-medium">Tue</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="w-full bg-primary-100 dark:bg-primary-900/40 rounded-full h-24 flex items-end">
+<div class="w-full bg-primary-500 rounded-full" style="height: 20%;"></div>
+</div>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-medium">Wed</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="w-full bg-primary-100 dark:bg-primary-900/40 rounded-full h-24 flex items-end">
+<div class="w-full bg-primary-500 rounded-full" style="height: 30%;"></div>
+</div>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-medium">Thu</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="w-full bg-primary-100 dark:bg-primary-900/40 rounded-full h-24 flex items-end">
+<div class="w-full bg-primary-500 rounded-full" style="height: 50%;"></div>
+</div>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-medium">Fri</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="w-full bg-primary-100 dark:bg-primary-900/40 rounded-full h-24 flex items-end">
+<div class="w-full bg-primary-500 rounded-full" style="height: 80%;"></div>
+</div>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-medium">Sat</p>
+</div>
+<div class="flex flex-col items-center gap-2 w-full">
+<div class="w-full bg-primary-100 dark:bg-primary-900/40 rounded-full h-24 flex items-end">
+<div class="w-full bg-primary-500 rounded-full" style="height: 90%;"></div>
+</div>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-medium">Sun</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-card-light dark:bg-card-dark p-4 sm:p-6 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-center mb-4">
+<div>
+<h3 class="text-lg font-bold text-text-light-primary dark:text-text-dark-primary">The Magical Forest Adventure</h3>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Yesterday • 15 min listen</p>
+</div>
+<button class="text-text-light-secondary dark:text-text-dark-secondary p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="space-y-3">
+<details class="group bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<p class="font-semibold text-text-light-primary dark:text-text-dark-primary">"Why is the sky blue?"</p>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+<p class="text-text-light-secondary dark:text-text-dark-secondary mb-4 text-sm leading-relaxed">AI Answer: The sky is blue because of how the Earth's atmosphere scatters sunlight. It's a bit like how a prism splits white light into a rainbow!</p>
+<div class="flex items-center gap-2 flex-wrap">
+<button class="flex items-center gap-1.5 text-sm text-green-600 bg-green-100 dark:bg-green-500/10 dark:text-green-400 px-3 py-1.5 rounded-full font-medium hover:bg-green-200 dark:hover:bg-green-500/20 transition-colors">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                    Approve
+                  </button>
+<button class="flex items-center gap-1.5 text-sm text-blue-600 bg-blue-100 dark:bg-blue-500/10 dark:text-blue-400 px-3 py-1.5 rounded-full font-medium hover:bg-blue-200 dark:hover:bg-blue-500/20 transition-colors">
+<span class="material-symbols-outlined text-base">edit</span>
+                    Edit
+                  </button>
+<button class="flex items-center gap-1.5 text-sm text-amber-600 bg-amber-100 dark:bg-amber-500/10 dark:text-amber-400 px-3 py-1.5 rounded-full font-medium hover:bg-amber-200 dark:hover:bg-amber-500/20 transition-colors">
+<span class="material-symbols-outlined text-base">flag</span>
+                    Flag
+                  </button>
+</div>
+</div>
+</details>
+<details class="group bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<p class="font-semibold text-text-light-primary dark:text-text-dark-primary">"Can squirrels fly?"</p>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+<p class="text-text-light-secondary dark:text-text-dark-secondary mb-4 text-sm leading-relaxed">AI Answer: That's a great question! Squirrels can't fly like birds, but some can glide from tree to tree using flaps of skin between their legs. They look like little furry superheroes!</p>
+<div class="flex items-center gap-2 flex-wrap">
+<button class="flex items-center gap-1.5 text-sm text-green-600 bg-green-100 dark:bg-green-500/10 dark:text-green-400 px-3 py-1.5 rounded-full font-medium hover:bg-green-200 dark:hover:bg-green-500/20 transition-colors">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                    Approve
+                  </button>
+<button class="flex items-center gap-1.5 text-sm text-blue-600 bg-blue-100 dark:bg-blue-500/10 dark:text-blue-400 px-3 py-1.5 rounded-full font-medium hover:bg-blue-200 dark:hover:bg-blue-500/20 transition-colors">
+<span class="material-symbols-outlined text-base">edit</span>
+                    Edit
+                  </button>
+<button class="flex items-center gap-1.5 text-sm text-amber-600 bg-amber-100 dark:bg-amber-500/10 dark:text-amber-400 px-3 py-1.5 rounded-full font-medium hover:bg-amber-200 dark:hover:bg-amber-500/20 transition-colors">
+<span class="material-symbols-outlined text-base">flag</span>
+                    Flag
+                  </button>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-4 sm:p-6 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-center mb-4">
+<div>
+<h3 class="text-lg font-bold text-text-light-primary dark:text-text-dark-primary">The Mystery of the Missing Toy</h3>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">2 days ago • 22 min listen</p>
+</div>
+<button class="text-text-light-secondary dark:text-text-dark-secondary p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="space-y-3">
+<details class="group bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<p class="font-semibold text-text-light-primary dark:text-text-dark-primary">"What is a clue?"</p>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+<p class="text-text-light-secondary dark:text-text-dark-secondary mb-4 text-sm leading-relaxed">AI Answer: A clue is like a little piece of a puzzle! It's a hint that helps you figure out a mystery, just like the detectives in the story.</p>
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-2 text-sm text-green-600 dark:text-green-400 font-medium px-3 py-1.5 rounded-full bg-green-100 dark:bg-green-500/10">
+<span class="material-symbols-outlined text-base fill">check_circle</span> Approved
+                  </span>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+</main>
+</div>
+<div class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 hidden" id="edit-modal">
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-2xl p-6 w-full max-w-lg border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-xl font-bold text-text-light-primary dark:text-text-dark-primary">Edit Answer</h2>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-4">
+<div>
+<label class="font-medium text-sm text-text-light-secondary dark:text-text-dark-secondary">Original Question</label>
+<p class="text-text-light-primary dark:text-text-dark-primary mt-1 p-3 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm">"Why is the sky blue?"</p>
+</div>
+<div>
+<label class="font-medium text-sm text-text-light-secondary dark:text-text-dark-secondary" for="edit-answer-textarea">AI's Answer</label>
+<textarea class="form-textarea mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-card-light dark:bg-card-dark text-text-light-primary dark:text-text-dark-primary focus:border-primary-500 focus:ring-primary-500 transition" id="edit-answer-textarea" rows="4"></textarea>
+</div>
+</div>
+<div class="flex justify-end gap-3 mt-6">
+<button class="px-4 py-2 rounded-lg text-text-light-primary dark:text-text-dark-primary bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-sm font-semibold transition-colors">Cancel</button>
+<button class="px-4 py-2 rounded-lg text-white bg-primary-600 hover:bg-primary-700 text-sm font-semibold transition-colors shadow-sm">Save Changes</button>
+</div>
+</div>
+</div>
+
+</body></html>

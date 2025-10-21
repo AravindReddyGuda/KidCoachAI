@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Story Preview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#13a4ec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101c22",
+                "charcoal": "#333333",
+                "light-gray": "#F2F2F2"
+              },
+              fontFamily: {
+                "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-row">
+<aside class="w-64 bg-white dark:bg-gray-800/50 p-4 border-r border-gray-200 dark:border-gray-700">
+<div class="flex flex-col h-full">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="The Smith Family profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdEoZ0kYckB3WBfKy_IRZtcW0UPGjTEX5p2MU7dmprojJ3mx56nNbxf0FKJaptLE7I7sqHjb60cJPsmDTNbkjK0lDRxFlH55oKc_BV2s3rt53CaE3tncjEAQ2uA-VuERpoNvGl5M90XvPKL8bE9DmvzYfznkf197740bfDn8pgktim5MaYomRbN-Nd0t--eNisSN7PSzAd4MghYG-EwWRpWmnszFwvp1umpGglpVHjtFWc9_vsb3lIR9GdD-B9jc-SFXmBb4Mg3Ybp");'></div>
+<div class="flex flex-col">
+<h1 class="text-charcoal dark:text-white text-base font-medium leading-normal">The Smith Family</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">dave@thesmiths.com</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 text-charcoal dark:text-white hover:bg-light-gray dark:hover:bg-gray-700/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-sm font-medium leading-normal">Home</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-charcoal dark:text-white hover:bg-light-gray dark:hover:bg-gray-700/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">book</span>
+<p class="text-sm font-medium leading-normal">Library</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<p class="text-sm font-medium leading-normal">Create Story</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-charcoal dark:text-white hover:bg-light-gray dark:hover:bg-gray-700/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">shield</span>
+<p class="text-sm font-medium leading-normal">Parental Controls</p>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] mb-4">
+<span class="truncate">Upgrade to Premium</span>
+</button>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-charcoal dark:text-white hover:bg-light-gray dark:hover:bg-gray-700/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-charcoal dark:text-white hover:bg-light-gray dark:hover:bg-gray-700/50 rounded-lg" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Log out</p>
+</a>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 p-8 grid grid-cols-1 lg:grid-cols-5 gap-8">
+<div class="lg:col-span-3 flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<a class="flex items-center gap-2 text-charcoal dark:text-white hover:text-primary dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="text-sm font-medium">Back</span>
+</a>
+</div>
+<div class="flex flex-wrap justify-between gap-3 mb-4">
+<p class="text-charcoal dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">The Magical Treehouse Adventure</p>
+</div>
+<div class="flex-grow bg-white dark:bg-gray-800/50 rounded-xl p-6 overflow-y-auto">
+<p class="text-charcoal dark:text-gray-300 text-base font-normal leading-relaxed">
+                            Once upon a time, in a forest filled with whispering trees and sparkling streams, stood a magical treehouse. It wasn't just any treehouse; this one could travel to faraway lands with a single wish. Inside lived two curious and brave friends, Lily and Tom. One sunny morning, Lily said, 'I wish we could visit a castle in the clouds!' The treehouse trembled, and with a gentle whoosh, it lifted off the ground and soared into the sky.
+                            <br/><br/>
+                            They floated above fluffy white clouds that looked like cotton candy, until they spotted a magnificent castle with shimmering towers. As they landed, a friendly dragon with sparkling purple scales greeted them. 'Welcome, travelers!' he boomed with a warm smile. 'I am Draco. I've been waiting for you.'
+                            <br/><br/>
+                            Lily and Tom explored the cloud castle, sliding down rainbow slides and bouncing on marshmallow trampolines. They had a wonderful feast with Draco, eating moon cheese and drinking star juice. As the sun began to set, painting the sky in shades of orange and pink, it was time to go home. 'Thank you for an amazing adventure, Draco!' they waved, as the treehouse gently descended back to the quiet forest.
+                        </p>
+</div>
+</div>
+<div class="lg:col-span-2 flex flex-col gap-8">
+<div class="px-4 py-3">
+<div class="flex flex-col gap-3 rounded-xl bg-light-gray dark:bg-gray-800/50 px-4 py-3">
+<div class="flex items-center gap-4 overflow-hidden">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shrink-0" data-alt="A vibrant illustration of a magical treehouse" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmK7MbZd9Dw3eZiSV88FuNSkJ-J8w-11e_myKOAHCbM8cGDiIWMuL-Vl1BjEwnLISxmxzW_Q0DP8bRnD1KkM9Ytb2-_Kl50t0rYtja5_5xE8RZzSUhrAqdVyNAY8QCyUsDcsJsr99ifBZvo3rg3XZwd43Uh3pNISfblvegZmBwrzdoYUZrUXVo3_01Chxs7l281_-nQOR7VgBnOGtJIJwOG1TYn5rEQBuuRWy22dgbGnL4HLV9-M_sdWsVPCnci-ept2piQnZA1nha");'></div>
+<div class="flex-1">
+<p class="text-charcoal dark:text-white text-base font-bold leading-tight truncate">Listen to the Story</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal truncate">AI Narrator</p>
+</div>
+<button class="flex shrink-0 items-center justify-center rounded-full size-10 bg-primary text-white">
+<span class="material-symbols-outlined text-inherit">play_arrow</span>
+</button>
+</div>
+<div class="pt-1.5">
+<div class="flex h-4 items-center justify-center">
+<div class="h-1 flex-1 rounded-full bg-primary/40">
+<div class="h-1 rounded-full bg-primary" style="width: 50%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">1:17</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal tracking-[0.015em]">2:23</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800/50 rounded-xl p-6 flex flex-col gap-6">
+<h2 class="text-charcoal dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Want to make some changes?</h2>
+<textarea class="w-full min-h-[120px] p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-background-light dark:bg-gray-700 text-charcoal dark:text-white text-sm focus:ring-primary focus:border-primary" placeholder="e.g., 'Make the dragon friendlier' or 'Add more details about the castle.'"></textarea>
+<div class="flex flex-col gap-3">
+<button class="flex w-full items-center justify-center rounded-xl h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined mr-2">auto_fix_high</span>
+                                Revise Story
+                            </button>
+<button class="flex w-full items-center justify-center rounded-xl h-12 px-6 bg-light-gray dark:bg-gray-700 text-charcoal dark:text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                                Confirm &amp; Add to Library
+                            </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

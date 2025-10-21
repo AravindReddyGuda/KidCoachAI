@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Story App Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-7xl flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 px-4 sm:px-6 lg:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-gray-800 dark:text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined !text-4xl">auto_stories</span>
+</div>
+<h2 class="text-gray-800 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Story App</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-gray-800 dark:text-white text-sm font-medium leading-normal hover:text-primary" href="#">Animals</a>
+<a class="text-gray-800 dark:text-white text-sm font-medium leading-normal hover:text-primary" href="#">Magic</a>
+<a class="text-gray-800 dark:text-white text-sm font-medium leading-normal hover:text-primary" href="#">Bedtime</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+<div class="text-gray-500 dark:text-gray-400 flex bg-gray-100 dark:bg-background-dark items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-gray-800 dark:text-white focus:outline-0 focus:ring-0 border-none bg-gray-100 dark:bg-background-dark h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 text-base font-normal leading-normal" placeholder="Search..." value=""/>
+</div>
+</label>
+<button class="flex sm:hidden max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 w-10 bg-gray-100 dark:bg-background-dark text-gray-800 dark:text-white">
+<span class="material-symbols-outlined">search</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture, an abstract colorful pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWZkSk0PTN_eQQRmQg2_UfsqSNON2ZbdmcIFz6J9DebQ-2xvtJZpYqI6PERFNuGGHLmVfwpuJbBINY0BB5CtAlvNgSLMQKB8daB2KsfwR-mDx3KGHSGoRW37nXjxsdGmRe0lBHPhl9EkMs8te-EekHdZBSPhAIC-yXeZDULCybzdzSmc0H2Nku87smdL8bMu7BpMma-Drt0hHE808Q8LSmbmXSBo3IC-0lD-crnzsMWUECRM4_M4u6nQBbvwGLTf-1hzB1wXlkjmik");'></div>
+</div>
+</header>
+<main class="flex-1 p-4 md:p-6 lg:p-8">
+<div class="flex justify-end mb-6">
+<div class="relative">
+<button class="flex items-center gap-2 rounded-full bg-primary/20 dark:bg-primary/30 px-4 py-2 text-primary dark:text-white hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+<span class="text-sm font-medium">Filter</span>
+</button>
+<div class="absolute top-full right-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 z-10 hidden">
+<h3 class="text-lg font-bold text-gray-800 dark:text-white mb-4">Filter by</h3>
+<div class="flex flex-col gap-3">
+<a class="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">schedule</span>
+<span class="font-medium">Most Recent</span>
+</a>
+<a class="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">child_care</span>
+<span class="font-medium">Age</span>
+</a>
+<a class="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">lightbulb</span>
+<span class="font-medium">Moral of the Story</span>
+</a>
+<a class="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">timer</span>
+<span class="font-medium">Total Play Time</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 md:gap-8">
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="relative w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+<div class="absolute inset-0 bg-black/10"></div>
+<img class="w-full h-full object-cover" data-alt="Illustration of a magical tree with glowing fruits." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdrGLm4IXYLR_hEZPEyFMp6qCLLZl5aLRiRgEBHMuyC7OpamZMsOnaRgu8IvJR7FtxqhmJ9R9Fbwy7x19EZrAgBt48y9-4OX-KB7dHTefcXh2_iUzpHOxUFWK6m0wryDPMgGe6D38GTb-69hc4UzuOqrh26gX9AxFdrp6xznceELM4isy8P1glGZdLT2ru_g4oGqaZNvOXgO6SZua6e3jYB3Co3ajExiwBIM6dEHctwOyXWegJ-XM-d9-9zYpRIueRQD9_6Dr3sAj7"/>
+<div class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-black/50 rounded-full">
+<span class="material-symbols-outlined text-green-500 !text-2xl">check_circle</span>
+</div>
+</div>
+<p class="text-gray-800 dark:text-white text-lg font-bold text-center">The Magical Tree</p>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="Illustration of a brave knight in shining armor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPVajyHz8i5wT00ys3yYCl7qxantIfRsWnvwi2TxHStzNHc1p-XeY9WZnCyMEoBUgsu6Wzd27oxbloFS_SOkUUgeUtjTFdqqbLNIlHBTT9pk7ge9MHx8A25p4bj_azxmRJM0EiO44z5YJ81SgzyA_N4ORFHH0oaR-Iglk63SAXEOM-zHInc8-znhoaMGCy3YoGZb8QVs-2OZcixHgMIJxcdShYDuSM09Ov3KRbv2pCCPkZoE05miXlHuZCrl2mIpMGzedicLZDJJf6"/>
+</div>
+<p class="text-gray-800 dark:text-white text-lg font-bold text-center">The Brave Knight</p>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="Illustration of a cute lost puppy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB5h7K3SB0o467N3_F8d78LTpCQaG-eqVyW7Bi0q_IoB3j-03a3-8F_NoIcSRxc99uOi0_64LeCVwAHCJhsfaVD5_B__K8y1ONxCSH3GKYdN2Gb2ANKOAL2iIk_IzCwTjgo6jZhJzkdzbYTUfb3_MEssGZxOQJQ6rL-oRtai40MvhMv7LxQIOqVrKyBTJG7Q02h0lBWFjgIjO7Zqb8h_oEohqQaO_Jif62brHgPrMmKaiBd1dcGUJvj2IfD3Doo9rHxc91yooP6fNk"/>
+</div>
+<p class="text-gray-800 dark:text-white text-lg font-bold text-center">The Lost Puppy</p>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="relative w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="Illustration of a flying carpet over a desert." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH7iATXRb57atJiSIQnsLpI8dQTYsE4I8PxwMwnXZ8thmOu1Cme-b1IBv7QcrLlb6r9dWzthLJ64sO_AijWAi_Y2DFRcL-v7uAf3KYSbx1keiEvrAKVgIWgbQOINc3zpGHFQ_Ul2nFDB_EYWSqaJEZkqJszpctQN4MfxzxIWQpEKJOd0HFJpxXGxnIWQkB0QjRxibdtAzmrX2UUFEuhEPXm2JnNrjmy7vgd_-VTJNTHUm2oR5dlgDZILOrzA_t4A5WouUJqo8EDNKt"/>
+<div class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-black/50 rounded-full">
+<span class="material-symbols-outlined text-green-500 !text-2xl">check_circle</span>
+</div>
+</div>
+<p class="text-gray-800 dark:text-white text-lg font-bold text-center">The Flying Carpet</p>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="Illustration of a princess on a stack of mattresses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIghy2A1HFHAsxyBQ9sAbfxJK5L--YiOTJSpJ6muNBEJIQ6-dW8YZzd2od6x1yG-VBjhyqzcCVXOUC6tfb3nVah2ncPOS6tFp8GVGC18jdKAuXw3T9reXiJlOAFl-Ixn5eJLaL8f9vZ7A2wHKTT7RNJLrrMK8nYlv_I36ot_2eaXPxbnky3KUFo2S8e-m4nYrgDBvYMbUEJA8aNa1EOGfUGTeinRyWo7q7GYL3pbAgFe6EzSiJ-QlOo7_JHiIxb6NczKnAl3BHmc6c"/>
+</div>
+<p class="text-gray-800 dark:text-white text-lg font-bold text-center">The Princess and the Pea</p>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="Illustration of three little pigs building their houses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJX7CYRI4XSxQ5uX4zkhfpRYBcdOmSYu52vvzb91F_OtoNDnS9xrNRJbOMfhGcrcdd4bj-IvlagW3YnDzmlsf8qSIhlFsvz7NeyfnzxxoGjmMhpyeJb6a5hAI8kTKhuypy8z1jz5X4UDgZ6FyPTD9Y58sanMSezmItlw-NzNqbI_OI5WCjG485Nh-E9cSgjyFn0-3BKpB9vrahwthUqVqUw3f27E5YHt2iQENwCrLJyZ19JLf57c0o-Ge-OjnUX9AcjgAC6gY05kk3"/>
+</div>
+<p class="text-gray-800 dark:text-white text-lg font-bold text-center">The Three Little Pigs</p>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="Illustration of a friendly dragon." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv1CW77vcp1cthMAg4fyGcLBW3MrhlBpP0WuwrQP8tMx3Qu2qToONjPNxm36WnroEPMvMzujJgoJnL9ibv7dbAIr7wupk2Qm6Avyz-DoKyTK59deb5c2osXgTMcdNP6474V3pxO4hPQwc0FYc5gxzABm9R7wLY-a-BPb_6U1EcJFLdm8w-BpMCkySM9AsNOQex9q1CQJZLH3r-oQd2Qhx9ToL9w1SG4m8z6fi6wGCm7-wR3kFH6IX74CQ--p_sdhLzlBcNI6mlj0h0"/>
+</div>
+<p class="text-gray-800 dark:text-white text-lg font-bold text-center">The Friendly Dragon</p>
+</div>
+<div class="flex flex-col gap-3 pb-3 group cursor-pointer">
+<div class="relative w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="Illustration of a submarine exploring underwater." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT7PQeKLRbbjGdiBLylJv_CjrN6z-RE6JkonLZLgNkX7_k-i1_PnUFUpyCkJodLIwhK3IrGnBCvd4xF-CkQDAHBSi6uDci3mFDooHCiFdCnFLfPz2k7Nc8fGiGnudVEKBW8_TfyeCCpCL5kE-fcQxTkTYQ3Yd-p8NOm8kLcTdLI71tZrBh9juzdYS7dXjJb04hObKeGnkvK0cdq59SRx_uAU9kb10moovr_IXsQmCM46WlvioVEEwwrXV0oUHnGrQPjNtd7v2dPaQk"/>
+<div class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-black/50 rounded-full">
+<span class="material-symbols-outlined text-green-500 !text-2xl">check_circle</span>
+</div>
+</div>
+<p class="text-gray-800 dark:text-white text-lg font-bold text-center">Under the Sea</p>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+<div class="fixed bottom-8 right-8 z-50">
+<button class="flex max-w-sm cursor-pointer items-center justify-center overflow-hidden rounded-full h-16 px-6 bg-primary text-white shadow-lg hover:bg-primary/90 transition-all duration-300 group">
+<span class="material-symbols-outlined !text-3xl mr-3 group-hover:rotate-90 transition-transform duration-300">auto_awesome</span>
+<span class="truncate text-lg font-bold">Create Story</span>
+</button>
+</div>
+<div class="fixed bottom-8 left-8 z-50">
+<button class="flex items-center justify-center h-14 w-14 rounded-full bg-yellow-400 text-gray-800 shadow-lg hover:bg-yellow-500 transition-colors duration-300">
+<span class="material-symbols-outlined !text-3xl">record_voice_over</span>
+</button>
+</div>
+</div>
+
+</body></html>

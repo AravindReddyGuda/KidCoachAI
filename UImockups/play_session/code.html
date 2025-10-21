@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Storyteller</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+              accent: "#ff8c42",
+              "text-soft": "#4a5568",
+              "background-pastel-blue": "#e0f7fa",
+              "background-pastel-green": "#e8f5e9",
+              "background-pastel-yellow": "#fffde7",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "Noto Sans", "sans-serif"],
+              heading: ["Lilita One", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+            animation: {
+              highlight: "highlight 2s ease-in-out forwards",
+            },
+            keyframes: {
+              highlight: {
+                "0%": {
+                  backgroundSize: "0% 100%",
+                },
+                "100%": {
+                  backgroundSize: "100% 100%",
+                },
+              },
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .karaoke-text span {
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 0% 100%;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .karaoke-text span.active {
+        animation: highlight-text 1.5s linear forwards;
+        color: #101c22;
+        background-image: linear-gradient(to right, #ff8c42, #ff8c42);
+      }
+      .karaoke-text span.past {
+        color: #ff8c42;
+      }
+      @keyframes highlight-text {
+        from {
+          background-size: 0% 100%;
+        }
+        to {
+          background-size: 100% 100%;
+        }
+      }
+    </style>
+</head>
+<body class="bg-background-pastel-blue dark:bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center items-center p-4 md:p-8">
+<div class="layout-content-container grid grid-cols-1 md:grid-cols-3 gap-8 w-full h-full max-w-screen-2xl">
+<div class="md:col-span-2 flex flex-col gap-4">
+<div class="relative flex-grow flex items-center justify-center">
+<div class="w-full bg-center bg-no-repeat bg-contain flex flex-col justify-end overflow-hidden rounded-xl h-[75vh] max-h-[800px]" data-alt="A whimsical illustration of a friendly dragon and a child reading a book under a starry sky." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDP2maYMTwqlU5Ij_quubV6Omt-Urt9tsug-pzhug2fmXZaOnEx-X8vuOeacC6o8uDWb-pb6g4Q_nW59r5ww3AQILW0XLcUiyvATabF3Fz96LdsKUs5XIWUwIKel0jo8nk0whDS_iJQn-2n39_dUSpE37eQnzJa_jCDUxhaL0WdsmkF0lM4K37ANhISjcyoVCT0eYTYaeq_D_RgChaB79k07fWlPcE9ITffZfCBBnsxr_rOKvladIwRfIuOtD99TJtcVlpUwvwmGPOU"); background-size: cover;'></div>
+<div class="absolute top-4 right-4 z-10">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 w-14 bg-white/80 dark:bg-background-dark/80 text-text-soft dark:text-white backdrop-blur-sm">
+<span class="material-symbols-outlined text-3xl"> settings </span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4 z-10">
+<div class="flex items-center justify-center">
+<div class="w-24 h-24">
+<img class="w-full h-full object-contain" data-alt="A cute, friendly owl AI helper character, winking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmXkf7o6CGV4RG1yCGXU4iVjb7swmIn9dZIz-D8k_NIgPVv6w-swiwpTGNcq0g8FEWyXKR3A6UWpDU6exR-7ZgwdOH5vhhJfsY2jmXExTgotu2f9PJFrbyHHVT5Tr-GdhL8qstINtgpRdcHabXf_Wco17_bqtbwTIMS3il5hx5aMt6TPO3pPlIet829_lae7neqNH1ywcXGM_OTzSne34dO86oLtILvWHwE7Y376yZtiT7jkWOOLqil_648UHlFl7mRXft0CF22zOc"/>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-white/70 dark:bg-background-dark/70 backdrop-blur-lg rounded-xl">
+<div class="flex flex-col gap-3">
+<div class="rounded-full bg-gray-200 dark:bg-gray-700 h-3">
+<div class="h-3 rounded-full bg-accent" style="width: 45%"></div>
+</div>
+</div>
+<div class="flex justify-between items-center gap-4 px-2">
+<div class="flex gap-4">
+<button class="p-3 rounded-full bg-primary/20 hover:bg-primary/30 text-primary dark:text-white dark:bg-primary/50 dark:hover:bg-primary/60 transition-colors">
+<span class="material-symbols-outlined text-4xl"> skip_previous </span>
+</button>
+<button class="p-4 rounded-full bg-accent text-white hover:bg-opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-5xl"> pause </span>
+</button>
+<button class="p-3 rounded-full bg-primary/20 hover:bg-primary/30 text-primary dark:text-white dark:bg-primary/50 dark:hover:bg-primary/60 transition-colors">
+<span class="material-symbols-outlined text-4xl"> skip_next </span>
+</button>
+</div>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-16 bg-primary text-white gap-3 text-lg font-bold leading-normal tracking-[0.015em] min-w-0 px-6">
+<span class="material-symbols-outlined text-3xl"> mic </span>
+<span class="truncate">Ask a Question</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col bg-white/70 dark:bg-background-dark/70 backdrop-blur-lg rounded-xl p-6 h-[calc(75vh+112px)] overflow-y-auto">
+<div class="flex-grow space-y-6 text-2xl md:text-3xl lg:text-4xl text-gray-500 dark:text-gray-400 font-heading leading-tight karaoke-text">
+<p>
+<span class="past">Once upon a time, in a land filled with sparkling rivers and candy-colored trees, lived a little dragon named Sparky.</span>
+</p>
+<p>
+<span class="active" style="background-image: linear-gradient(to right, rgb(255, 140, 66), rgb(255, 140, 66));">Sparky was not like the other dragons.</span>
+</p>
+<p><span>He couldn't breathe fire. Instead, every time he tried, he sneezed out a shower of shimmering, colorful bubbles!</span></p>
+<p><span>The other dragons would laugh, but Sparky was sad. He wanted to be a real dragon.</span></p>
+<p><span>One day, a big, grumpy bear came to the village. All the dragons tried to scare him away with their fire, but the bear just growled.</span></p>
+<p><span>Then, little Sparky stepped forward. He took a deep breath, and... ACHOO!</span></p>
+<p><span>A giant wave of bubbles floated towards the bear. They tickled his nose and made him giggle.</span></p>
+<p><span>The grumpy bear wasn't grumpy anymore! He became friends with all the dragons, and Sparky learned that his special bubbles were a gift.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
